@@ -1,0 +1,5 @@
+name: AA Luke Module
+description: A generic module to module all the things
+type: module
+core_version_requirement: ^9
+package: AA Luke

@@ -1,0 +1,5 @@
+name: 'Luke 02'
+description: 'More stuff.  To run this fucker, go to /luke02'
+type: module
+core_version_requirement: ^8 || ^9
+package: 'AA Luke'

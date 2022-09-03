@@ -1,0 +1,7 @@
+basic_custom.hello:
+  path: '/luke01'
+  defaults:
+    _controller: '\Drupal\luke01\Controller\Luke01Controller::helloWorld'
+    _title: 'luke 01 is online'
+  requirements:
+    _access: 'TRUE'

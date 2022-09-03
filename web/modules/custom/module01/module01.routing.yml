@@ -1,0 +1,7 @@
+module01.module01:
+  path: '/module01'
+  defaults:
+    _controller: Drupal\module01\Controller\Module01Controller::Module01
+    _title: 'Module01 - Output some HTML'
+  requirements:
+    _permission: 'access content'

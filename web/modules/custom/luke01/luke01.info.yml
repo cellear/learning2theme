@@ -1,0 +1,5 @@
+name: 'Luke 01'
+description: 'Hello World Basic Custom module.  To run this fucker, go to /luke01'
+type: module
+core_version_requirement: ^8 || ^9
+package: 'AA Luke'

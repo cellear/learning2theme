@@ -1,0 +1,7 @@
+luke02.hello:
+  path: '/luke02'
+  defaults:
+    _controller: '\Drupal\luke02\Controller\Luke02Controller::runFucker'
+    _title: 'luke 02'
+  requirements:
+    _access: 'TRUE'
