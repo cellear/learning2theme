@@ -1,48 +1,93 @@
-{#
-/**
- * @file
- * Theme override for the basic structure of a single Drupal page.
- *
- * Variables:
- * - logged_in: A flag indicating if user is logged in.
- * - root_path: The root path of the current page (e.g., node, admin, user).
- * - node_type: The content type for the current node, if the page is a node.
- * - head_title: List of text elements that make up the head_title variable.
- *   May contain one or more of the following:
- *   - title: The title of the page.
- *   - name: The name of the site.
- *   - slogan: The slogan of the site.
- * - page_top: Initial rendered markup. This should be printed before 'page'.
- * - page: The rendered page markup.
- * - page_bottom: Closing rendered markup. This variable should be printed after
- *   'page'.
- * - db_offline: A flag indicating if the database is offline.
- * - placeholder_token: The token for generating head, css, js and js-bottom
- *   placeholders.
- *
- * @see template_preprocess_html()
- */
-#}
 
 <!DOCTYPE html>
 <html{{ html_attributes }}>
-  <head>
     <head-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
     <title>{{ head_title|safe_join(' | ') }}</title>
     <css-placeholder token="{{ placeholder_token }}">
     <js-placeholder token="{{ placeholder_token }}">
+
+    <style media="screen">
+      .main-picture {
+          width: 200px;
+      }
+      .page-contents {
+          border: 3px black dotted;
+          padding: 10px;
+          width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 20px;
+      }
+      
+a.cache-button {
+    background: #a966ef;
+    color: lightyellow;
+    text-decoration: none;
+    width: 300px;
+    height: 50px;
+    /* border: 3px black solid; */
+    padding: 6px;
+    font-family: sans-serif;
+    box-shadow: 3px 4px 3px rgb(0 0 0 / 30%);
+}
+    </style>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
-    {#
-      Keyboard navigation/accessibility link to main content section in
-      page.html.twig.
-    #}
-    <a href="#main-content" class="visually-hidden focusable skip-link">
-      {{ 'Skip to main content'|t }}
-    </a>
-    {{ page_top }}
-    {{ page }}
-    {{ page_bottom }}
-    <js-bottom-placeholder token="{{ placeholder_token }}">
+
+  {{ page_top }}
+
+  <h1>Welcome to some site running the luke01 Drupal theme!</h1>
+  <a class="cache-button" href="http://drupal-01.mbp/admin/flush?token=ial4bcG9U9HWfziS-OwGZvq8y1LYEpeRhfNOo3d5ASU">
+  Click here to Flush cache!</a>
+  <p>This theme includes these variables:</b>
+  <ul>
+    <li>html_attributes</li>
+    <li>placeholder_token</li>
+    <li>head_title|safe_join(' | ')</li>
+    <li>page_top</li>
+    <li>page_bottom</li>
+  </ul>
+
+  <table border="1">
+    <tr>
+    <td>html_attributes</td>
+    <td>{{ html_attributes}}</td>
+    </tr>
+    <tr>
+    <td>placeholder_token</td>
+    <td>placeholder_token</td>
+    </tr>
+    <tr>
+    <td>head_title|safe_join(' | ')</td>
+    <td>{{ head_title|safe_join(' | ') }}</td>
+    </tr>
+    <tr>
+    <td>page_top</td>
+    <td>{{page_top}}</td>
+    </tr>
+
+    <tr>
+    <td>page_bottom</td>
+    <td>{{page_bottom}}</td>
+    </tr>
+    </table>
+
+  </ul>
+
+  <div align="center">
+  <img class="main-picture" src="{{ base_path ~ directory }}/images/luke.png" alt="luke" />
+  </div>
+
+
+
+<div class="page-contents">
+      {{ page }}
+</div>
+
+  <js-bottom-placeholder token="{{ placeholder_token }}">
+
+
+
   </body>
 </html>
