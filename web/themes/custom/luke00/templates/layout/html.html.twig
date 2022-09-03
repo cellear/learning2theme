@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * What does that "at file" thing do?
+ * This is a less-than-minimal theme.  It can be selected, but then it will just
+ * display an HTML page -- the SAME HTML page no matter what you select.  So do
+ * not make it your admin theme.
+ */
+#}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Static HTML created by "luke00" theme</title>
+    <style media="screen">
+      .main-picture {
+          width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+<h1>Welcome to some site running the luke00 Drupal theme!</h1>
+<p>It doesn't matter what Drupal is trying to display, this theme will ignore
+it all.  All it's going to do is display this picture of Luke:</b>
+
+{# note our inclusion of the construct "{{ base_path ~ directory }} below
+base_path = the docroot of your Drupal installation
+directory = the local path to the directory where your theme is installed
+~ = the concatenation character, it combines strings.
+#}
+
+<div align="center">
+<img class="main-picture" src="{{ base_path ~ directory }}/images/luke.png" alt="luke" />
+</div>
+  </body>
+</html>
