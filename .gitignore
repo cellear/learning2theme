@@ -12,7 +12,7 @@ local.blt.yml
 docroot/core
 
 # Ignore paths that contain user-generated content.
-docroot/sites/*/files
+web/sites/*/files
 /files-private
 docroot/sites/*/private
 
