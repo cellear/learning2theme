@@ -9,29 +9,29 @@ box/local.config.yml
 local.blt.yml
 
 # Ignore drupal core.
-docroot/core
+web/core
 
 # Ignore paths that contain user-generated content.
 web/sites/*/files
 /files-private
-docroot/sites/*/private
+web/sites/*/private
 
 # Ignore contrib modules. These should be created during build process.
-docroot/modules/contrib
-docroot/themes/contrib
-docroot/profiles/contrib
-docroot/libraries
+web/modules/contrib
+web/themes/contrib
+web/profiles/contrib
+web/libraries
 drush/Commands
 
 # Ignore custom theme build artifacts
-docroot/themes/custom/*/node_modules
-docroot/themes/custom/*/css
-docroot/themes/custom/*/js/dist
+web/themes/custom/*/node_modules
+web/themes/custom/*/css
+web/themes/custom/*/js/dist
 .DS_Store
-docroot/themes/custom/sb/pattern-lab/export/*
-docroot/themes/custom/sb/pattern-lab/public/*
-docroot/themes/custom/sb/pattern-lab/source/css/*
-docroot/themes/custom/sb/pattern-lab/vendor/*
+web/themes/custom/sb/pattern-lab/export/*
+web/themes/custom/sb/pattern-lab/public/*
+web/themes/custom/sb/pattern-lab/source/css/*
+web/themes/custom/sb/pattern-lab/vendor/*
 yarn-error.log
 
 # Ignore build artifacts
