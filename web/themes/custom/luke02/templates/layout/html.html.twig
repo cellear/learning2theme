@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+    <head-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+
+    <style media="screen">
+      .main-picture {
+          width: 200px;
+          float:right;
+      }
+      .page-contents {
+          border: 3px black dotted;
+          padding: 10px;
+          width: 75%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 20px;
+      }
+
+a.cache-button {
+    background: #a966ef;
+    color: lightyellow;
+    text-decoration: none;
+    width: 300px;
+    height: 50px;
+    /* border: 3px black solid; */
+    padding: 6px;
+    font-family: sans-serif;
+    box-shadow: 3px 4px 3px rgb(0 0 0 / 30%);
+}
+.page-html-template {
+    background: hsl(125deg 20% 33% / 14%);
+    padding: 25px;
+    margin: 10px;
+}
+body {
+    background: #eeefe1;
+}
+    </style>
+  </head>
+  <body{{ attributes.addClass(body_classes) }}>
+
+  {{ page_top }}
+
+  <h1>Welcome to some site running the luke02 Drupal theme!</h1>
+
+
+  <img class="main-picture" src="{{ base_path ~ directory }}/images/luke.png" alt="luke" />
+
+
+  <a class="cache-button" href="{{base_path}}/admin/flush?token=ial4bcG9U9HWfziS-OwGZvq8y1LYEpeRhfNOo3d5ASU">
+  Click here to Flush cache!</a>
+  <p>This theme includes these variables:</b>
+  <ul>
+    <li>html_attributes</li>
+    <li>placeholder_token</li>
+    <li>head_title|safe_join(' | ')</li>
+    <li>page_top</li>
+    <li>page_bottom</li>
+  </ul>
+
+  <table border="1">
+    <tr>
+    <td>html_attributes</td>
+    <td>{{ html_attributes}}</td>
+    </tr>
+    <tr>
+    <td>placeholder_token</td>
+    <td>placeholder_token</td>
+    </tr>
+    <tr>
+    <td>head_title|safe_join(' | ')</td>
+    <td>{{ head_title|safe_join(' | ') }}</td>
+    </tr>
+    <tr>
+    <td>page_top</td>
+    <td>{{page_top}}</td>
+    </tr>
+
+    <tr>
+    <td>page_bottom</td>
+    <td>{{page_bottom}}</td>
+    </tr>
+    </table>
+
+  </ul>
+
+
+
+
+
+<div class="page-contents">
+      {{ page }}
+</div>
+
+  <js-bottom-placeholder token="{{ placeholder_token }}">
+
+
+
+  </body>
+</html>
