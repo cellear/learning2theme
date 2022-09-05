@@ -1,0 +1,6 @@
+name: luke03
+type: theme
+'base theme': stable9
+core_version_requirement: ^9
+libraries:
+  - luke03/global-styling

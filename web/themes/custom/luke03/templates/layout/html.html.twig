@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html{{ html_attributes }}>
+    <head-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+    <title>{{ head_title|safe_join(' | ') }}</title>
+    <css-placeholder token="{{ placeholder_token }}">
+    <js-placeholder token="{{ placeholder_token }}">
+
+
+  </head>
+  <body{{ attributes.addClass(body_classes) }}>
+
+  {{ page_top }}
+  <img class="main-picture" src="{{ base_path ~ directory }}/images/luke.png" alt="luke" />
+  <h1>Welcome to some site running the luke03 Drupal theme!</h1>
+
+Now instead of our CSS in html.html.twig, it's in a library, defined in these three files:
+<ul>
+  <li>(The actual CSS in in) custom/luke03/css/junk-drawer.css</li>
+  <li>(Which is defined as a library called luke03/global-styling in) custom/luke03/luke03.libraries.yml</li>
+  <li>(And listed in) custom/luke03/luke03.info.yml</li>
+</ul>
+
+<hr>
+<h1>Dump!</h1>
+<ol>
+  {# for key, value in _context  %}
+    <li>{{ key }}</li>
+  {% endfor #}
+</ol>
+<hr>
+
+  <a class="cache-button" href="{{base_path}}/admin/flush?token=ial4bcG9U9HWfziS-OwGZvq8y1LYEpeRhfNOo3d5ASU">
+  Click here to Flush cache!</a>
+
+<div class="page-contents">
+      {{ page }}
+</div>
+
+<table class="attribute-table">
+  <tr>
+  <td>html_attributes</td>
+  <td>{{ html_attributes}}</td>
+  </tr>
+  <tr>
+  <td>placeholder_token</td>
+  <td>placeholder_token</td>
+  </tr>
+  <tr>
+  <td>head_title|safe_join(' | ')</td>
+  <td>{{ head_title|safe_join(' | ') }}</td>
+  </tr>
+  <tr>
+  <td>page_top</td>
+  <td>{{page_top}}</td>
+  </tr>
+
+  <tr>
+  <td>page_bottom</td>
+  <td>{{page_bottom}}</td>
+  </tr>
+  </table>
+
+<p>This theme includes these variables:</b>
+<ul>
+  <li>html_attributes</li>
+  <li>placeholder_token</li>
+  <li>head_title|safe_join(' | ')</li>
+  <li>page_top</li>
+  <li>page_bottom</li>
+</ul>
+
+  <js-bottom-placeholder token="{{ placeholder_token }}">
+
+
+
+  </body>
+</html>
