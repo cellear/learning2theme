@@ -19,7 +19,10 @@
   ]
 %}
 {% if content %}
+<div class="region-div">
+<h2>region: {{region}}</h2>
   <div{{ attributes.addClass(classes) }}>
     {{ content }}
   </div>
+  </div> {# class="region-div" #}
 {% endif %}

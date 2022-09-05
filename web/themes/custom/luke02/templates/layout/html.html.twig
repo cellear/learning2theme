@@ -8,10 +8,10 @@
     <js-placeholder token="{{ placeholder_token }}">
 
     <style media="screen">
-      .main-picture {
-          width: 200px;
-          float:right;
-      }
+    .main-picture {
+        width: 125px;
+        float: right;
+    }
       .page-contents {
           border: 3px black dotted;
           padding: 10px;
@@ -37,65 +37,124 @@ a.cache-button {
     padding: 25px;
     margin: 10px;
 }
+.page-html-template > h2 {
+    background: orange;
+    margin-top: 0;
+    margin-left: -23px;
+    margin-right: -23px;
+    margin-top: -25px;
+    font-size: medium;
+    font-family: sans-serif;
+    padding: 5px;
+}
 body {
     background: #eeefe1;
+}
+.region-div {
+    border: dotted hsl(45deg 100% 11%) 1px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+}
+.region-div h2 {
+    background: #187620;
+    padding: 3px;
+    color: white;
+    font-family: sans-serif;
+    margin-top: -6px;
+    margin-left: -4px;
+    font-size: medium;
+    margin-right: -4px;
+}
+.node-template {
+    background: hsl(60deg 38% 93% / 88%);
+    padding-left: 10px;
+    box-shadow: 3px 3px 2px 3px rgb(0 0 0 / 30%);
+    border: 3px black double;
+}
+
+.node-template h2 {
+    border: black 1px dotted;
+    margin-top: 0;
+    margin-left: 0;
+    background: navy;
+    color: white;
+    font-size: small;
+    left: 6px;
+    margin-left: -10px;
+    padding: 5px;
+    font-family: sans-serif;
+}
+table.attribute-table {
+    border: 2px black solid;
+    background: #ffff0026;
+    width: 80%;
+    margin-top: 25px;
+    padding: 5px;
+}
+table.attribute-table td {
+    background: #dfd5d5;
+    padding: 5px;
+    margin: 5px;
+    border: 3px black solid;
+}
+.block-template {
+    border: 2px dotted purple;
+    margin: 5px;
+    background: #f7dfe3;
+    padding: 5px;
 }
     </style>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
 
   {{ page_top }}
-
+  <img class="main-picture" src="{{ base_path ~ directory }}/images/luke.png" alt="luke" />
   <h1>Welcome to some site running the luke02 Drupal theme!</h1>
 
 
-  <img class="main-picture" src="{{ base_path ~ directory }}/images/luke.png" alt="luke" />
+
 
 
   <a class="cache-button" href="{{base_path}}/admin/flush?token=ial4bcG9U9HWfziS-OwGZvq8y1LYEpeRhfNOo3d5ASU">
   Click here to Flush cache!</a>
-  <p>This theme includes these variables:</b>
-  <ul>
-    <li>html_attributes</li>
-    <li>placeholder_token</li>
-    <li>head_title|safe_join(' | ')</li>
-    <li>page_top</li>
-    <li>page_bottom</li>
-  </ul>
-
-  <table border="1">
-    <tr>
-    <td>html_attributes</td>
-    <td>{{ html_attributes}}</td>
-    </tr>
-    <tr>
-    <td>placeholder_token</td>
-    <td>placeholder_token</td>
-    </tr>
-    <tr>
-    <td>head_title|safe_join(' | ')</td>
-    <td>{{ head_title|safe_join(' | ') }}</td>
-    </tr>
-    <tr>
-    <td>page_top</td>
-    <td>{{page_top}}</td>
-    </tr>
-
-    <tr>
-    <td>page_bottom</td>
-    <td>{{page_bottom}}</td>
-    </tr>
-    </table>
-
-  </ul>
-
-
-
-
 
 <div class="page-contents">
       {{ page }}
 </div>
+
+<table class="attribute-table">
+  <tr>
+  <td>html_attributes</td>
+  <td>{{ html_attributes}}</td>
+  </tr>
+  <tr>
+  <td>placeholder_token</td>
+  <td>placeholder_token</td>
+  </tr>
+  <tr>
+  <td>head_title|safe_join(' | ')</td>
+  <td>{{ head_title|safe_join(' | ') }}</td>
+  </tr>
+  <tr>
+  <td>page_top</td>
+  <td>{{page_top}}</td>
+  </tr>
+
+  <tr>
+  <td>page_bottom</td>
+  <td>{{page_bottom}}</td>
+  </tr>
+  </table>
+
+<p>This theme includes these variables:</b>
+<ul>
+  <li>html_attributes</li>
+  <li>placeholder_token</li>
+  <li>head_title|safe_join(' | ')</li>
+  <li>page_top</li>
+  <li>page_bottom</li>
+</ul>
 
   <js-bottom-placeholder token="{{ placeholder_token }}">
 
